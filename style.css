@@ -1,0 +1,226 @@
+:root {
+    --bg: #0a0f1c;
+    --bg-secondary: #11192b;
+    --panel: rgba(17, 25, 43, 0.78);
+    --text: #e6ecff;
+    --muted: #92a0c6;
+    --accent: #6ee7ff;
+    --accent-hover: #9af0ff;
+    --border: rgba(110, 231, 255, 0.22);
+    --shadow: 0 0 24px rgba(110, 231, 255, 0.08);
+    --max-width: 1200px;
+    --sidebar-width: 280px;
+    --radius: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at top right, rgba(110, 231, 255, 0.08), transparent 25%),
+        linear-gradient(180deg, #09111f 0%, #0a0f1c 100%);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+.background-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.layout {
+    display: flex;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    padding: 40px 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+}
+
+.sidebar-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.site-title {
+    margin: 0;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+}
+
+.site-tagline {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    width: fit-content;
+    transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(110, 231, 255, 0.6);
+    transform: translateX(4px);
+}
+
+.content {
+    flex: 1;
+    padding: 40px 28px 60px;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+p {
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.project-list {
+    display: grid;
+    gap: 18px;
+}
+
+.project-card {
+    padding: 22px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(110, 231, 255, 0.5);
+    box-shadow: 0 0 22px rgba(110, 231, 255, 0.08);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.project-card a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    color: var(--accent-hover);
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .content {
+        padding-top: 24px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .content,
+    .sidebar {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .panel {
+        padding: 22px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .site-title {
+        font-size: 1.4rem;
+    }
+}

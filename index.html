@@ -1,28 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owen Anderson | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
 <body>
-    <div class="container">
+    <div class="background-grid"></div>
 
+    <div class="layout">
         <aside class="sidebar">
-            <h1> Owen Anderson</h1>
+            <div class="sidebar-inner">
+                <h1 class="site-title">Owen Anderson</h1>
+                <p class="site-tagline">Software Engineer • Projects • Systems • ML</p>
 
-            <nav>
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#resume">Resume</a>
-                <a href="https://github.com/">GitHub</a>
-                <a href="#contact">Contact</a>
-            </nav>
+                <nav class="nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="Resume.pdf" class="nav-link" target="_blank">Resume</a>
+                    <a href="https://github.com/owanden" class="nav-link" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/owen-anderson-4a5971244" class="nav-link"
+                        target="_blank">LinkedIn</a>
+                </nav>
+            </div>
         </aside>
 
         <main class="content">
-            <section id="projects">
-                <h2>Projects</h2>
+            <section id="home" class="panel hero">
+                <p class="eyebrow">WELCOME</p>
+                <h2>Building thoughtful software with clean systems and clear design.</h2>
+                <p>
+                    I build technical projects across software engineering, machine learning,
+                    and systems. This portfolio is a collection of work I'm proud of.
+                </p>
             </section>
-            <section id="about">
-                <h2>About</h2>
+
+            <section id="projects" class="panel">
+                <p class="eyebrow">PROJECTS</p>
+                <h2>Selected Work</h2>
+
+                <div class="project-list">
+                    <article class="project-card">
+                        <h3>ARC Solver</h3>
+                        <p>
+                            A knowledge-based AI system for solving ARC tasks using a DSL and search heuristics.
+                        </p>
+                        <div class="project-meta">Python • Search • Reasoning</div>
+                        <a href="#">View Project</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>Rust Load Balancer</h3>
+                        <p>
+                            A high-performance async load balancer focused on concurrency, routing, and systems design.
+                        </p>
+                        <div class="project-meta">Rust • Tokio • Networking</div>
+                        <a href="#">View Project</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>MOBA Win Prediction Pipeline</h3>
+                        <p>
+                            A pipeline for ingesting game data, engineering features, and predicting match outcomes.
+                        </p>
+                        <div class="project-meta">Python • PostgreSQL • ML</div>
+                        <a href="#">View Project</a>
+                    </article>
+                </div>
             </section>
-            <section id="contact">
-                <h2>Contact</h2>
+
+            <section id="about" class="panel">
+                <p class="eyebrow">ABOUT</p>
+                <h2>Who I Am</h2>
+                <p>
+                    I'm a software engineer who likes building systems that are both technically strong
+                    and easy to understand. I'm especially drawn to projects involving infrastructure,
+                    machine learning, and full-stack engineering.
+                </p>
+            </section>
+
+            <section id="contact" class="panel">
+                <p class="eyebrow">CONTACT</p>
+                <h2>Get In Touch</h2>
+                <p>Email: owen.anderson.r@gmail.com</p>
+                <p>GitHub: github.com/owanden</p>
+                <p>LinkedIn: https://www.linkedin.com/in/owen-anderson-4a5971244/p>
             </section>
         </main>
     </div>
+
+    <script src="script.js"></script>
 </body>
+
+</html>
