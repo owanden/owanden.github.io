@@ -24,15 +24,15 @@
                 <h1 class="site-title">Owen Anderson</h1>
                 <p class="site-tagline">Software Engineer • Projects • Systems • ML</p>
 
-                <nav class="nav">
+                <nav class="nav" aria-label="Main navigation">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#contact" class="nav-link">Contact</a>
-                    <a href="Resume.pdf" class="nav-link" target="_blank">Resume</a>
-                    <a href="https://github.com/owanden" class="nav-link" target="_blank">GitHub</a>
+                    <a href="Resume.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a href="https://github.com/owanden" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://www.linkedin.com/in/owen-anderson-4a5971244" class="nav-link"
-                        target="_blank">LinkedIn</a>
+                        target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </nav>
             </div>
         </aside>
@@ -51,32 +51,40 @@
                 <p class="eyebrow">PROJECTS</p>
                 <h2>Selected Work</h2>
 
+                <p>Explore the source, runnable examples, and technical notes.</p>
                 <div class="project-list">
                     <article class="project-card">
-                        <h3>ARC Solver</h3>
+                        <h3>Dispatch</h3>
                         <p>
-                            A knowledge-based AI system for solving ARC tasks using a DSL and search heuristics.
+                            Durable webhook delivery with SQLite-backed events, bounded retries,
+                            signed requests, and inspectable attempt history.
                         </p>
-                        <div class="project-meta">Python • Search • Reasoning</div>
-                        <a href="#">View Project</a>
+                        <div class="project-meta">Python · SQLite · HTTPS</div>
+                        <div class="project-actions">
+                            <a href="https://github.com/owanden/dispatch">View Dispatch source</a>
+                            <a href="https://github.com/owanden/dispatch#run-the-demo">Run the local demo</a>
+                            <a href="https://github.com/owanden/dispatch/blob/main/docs/benchmarks.md">Read measured results</a>
+                        </div>
                     </article>
 
                     <article class="project-card">
-                        <h3>Rust Load Balancer</h3>
+                        <h3>Incident Triage Agent</h3>
                         <p>
-                            A high-performance async load balancer focused on concurrency, routing, and systems design.
+                            A Cloudflare Workers AI assistant that produces structured incident summaries,
+                            possible causes, and next steps, with session state in Durable Objects.
                         </p>
-                        <div class="project-meta">Rust • Tokio • Networking</div>
-                        <a href="#">View Project</a>
+                        <div class="project-meta">TypeScript · Cloudflare Workers AI · Durable Objects</div>
+                        <a href="https://github.com/owanden/cf_ai_incident_triage_agent">View Incident Triage Agent source</a>
                     </article>
 
                     <article class="project-card">
-                        <h3>MOBA Win Prediction Pipeline</h3>
+                        <h3>Office Hours Queue</h3>
                         <p>
-                            A pipeline for ingesting game data, engineering features, and predicting match outcomes.
+                            A student queue and TA management interface connecting a React frontend
+                            to an Express API. Queue state currently uses in-memory storage.
                         </p>
-                        <div class="project-meta">Python • PostgreSQL • ML</div>
-                        <a href="#">View Project</a>
+                        <div class="project-meta">TypeScript · React · Express</div>
+                        <a href="https://github.com/owanden/OH-Queue">View Office Hours Queue source</a>
                     </article>
                 </div>
             </section>
@@ -94,9 +102,9 @@
             <section id="contact" class="panel">
                 <p class="eyebrow">CONTACT</p>
                 <h2>Get In Touch</h2>
-                <p>Email: owen.anderson.r@gmail.com</p>
-                <p>GitHub: github.com/owanden</p>
-                <p>LinkedIn: https://www.linkedin.com/in/owen-anderson-4a5971244</p>
+                <p>Email: <a href="mailto:owen.anderson.r@gmail.com">owen.anderson.r@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/owanden">github.com/owanden</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/owen-anderson-4a5971244">linkedin.com/in/owen-anderson-4a5971244</a></p>
             </section>
         </main>
     </div>

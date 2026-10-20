@@ -109,6 +109,7 @@ body {
 
 .content {
     flex: 1;
+    min-width: 0;
     padding: 40px 28px 60px;
 }
 
@@ -222,5 +223,32 @@ p {
 
     .site-title {
         font-size: 1.4rem;
+    }
+}
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+#contact a {
+    color: var(--accent);
+    overflow-wrap: anywhere;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+    border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .nav-link,
+    .project-card {
+        transition: none;
     }
 }
