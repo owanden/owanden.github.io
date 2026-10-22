@@ -12,6 +12,10 @@ Selected work: Dispatch, RustLB, Office Hours Queue and Incident Triage Agent. E
 
 `demos/office-hours-queue/` retains the separate OH-Queue browser preview. It uses synthetic in-tab state, simulated roles and no backend/provider calls. `source.json` pins its source commit, build command and asset hashes. Update it from the source browser-preview target after checking the built output; do not copy environment files, source maps or private workspace material.
 
+## Incident browser preview
+
+`demos/incident-triage/` contains the separate Incident Triage browser build. Its fixed fixture, shared request handler and memory adapter execute within the tab. No backend/model calls or persistent browser storage; reload resets sessions. Use synthetic details only. `source.json` records source/build provenance and exact generated hashes. Rebuild from the pinned project source; publish only the three static files and provenance.
+
 ## Preview
 
 Serve this directory with a local static HTTP server, then inspect the home page, `/projects/rustlb/` and the existing queue preview. The generated portfolio pages require no browser JavaScript or package installation.

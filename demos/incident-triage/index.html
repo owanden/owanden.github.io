@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Incident Triage | Browser preview</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; base-uri 'none'; form-action 'none'">
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+	<main class="app">
+		<header class="header">
+<section aria-label="Browser preview information" class="preview-notice">
+<h2>Browser preview</h2>
+<p>Fixed example responses, not AI-generated findings. Synthetic data only. No backend or model calls. Entered text stays in this tab's memory; reload clears all sessions.</p>
+<div class="controls"><button id="sampleBtn" type="button">Run sample</button><button id="failureBtn" type="button">Simulate failure</button><button id="resetBtn" type="button">Reset preview</button></div>
+<p><a href="../../#projects">Portfolio</a> &middot; <a href="https://github.com/owanden/cf_ai_incident_triage_agent">Source</a> &middot; <a href="https://github.com/owanden/cf_ai_incident_triage_agent#run-the-fixture-demo">Local full-stack demo</a></p>
+</section>
+			<h1>Incident Triage Agent</h1>
+			<p>Enter synthetic details, or run the fixed sample above.</p>
+		</header>
+
+		<section class="controls">
+			<label for="incidentId">Incident ID</label>
+			<input id="incidentId" type="text" value="test" />
+			<button id="newIncidentBtn" type="button">New Incident ID</button>
+		</section>
+
+		<section class="overview">
+			<div class="overview-card">
+				<h2>Incident Overview</h2>
+
+				<div class="overview-row">
+					<span id="statusLabel" class="overview-label">Status</span>
+					<button id="incidentStatus" class="status-badge open" type="button"
+						aria-labelledby="statusLabel incidentStatus" aria-describedby="statusHelp">open</button>
+				</div>
+
+				<p id="statusHelp" class="status-help">Activate to switch between open and resolved.</p>
+
+				<div class="overview-block">
+					<h3>Summary</h3>
+					<p id="incidentSummary">No summary yet.</p>
+				</div>
+
+				<div class="overview-block">
+					<h3>Current hypotheses</h3>
+					<ul id="incidentHypotheses" class="overview-list">
+						<li>No hypotheses yet.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="messages" class="messages"></section>
+
+		<form id="chatForm" class="chat-form">
+			<label for="messageInput">Incident details</label>
+			<textarea id="messageInput" rows="6"
+				placeholder="Example: 500 errors spiked right after deployment and logs show repeated timeout errors from the payment service."
+				required></textarea>
+			<div class="actions">
+				<button id="sendBtn" type="submit">Send</button>
+			</div>
+		</form>
+	</main>
+
+	<script src="./app.js"></script>
+</body>
+
+</html>

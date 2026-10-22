@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/owanden/cf_ai_incident_triage_agent",
+  "commit": "230b8cce22d279498a2890b2348bdbae259a912a",
+  "build_command": "npm run build:preview",
+  "mode": "fixed browser-only fixture; no backend or model requests; tab memory only",
+  "sha256": {
+    "index.html": "210df1adc0d07fc714701b5fa86c9b4385189b23bafc12d7094a18fee0a5723c",
+    "app.js": "a9ec6440956c8500459c4db5da4c245dc73f10c15b8e2912fe9b44263be986db",
+    "styles.css": "d384fd9aa9eec1d2781b09910538abe05cd1a6ee7539dc6ad6b74d5864e5f141"
+  },
+  "text_line_endings": "LF normalized after build"
+}
