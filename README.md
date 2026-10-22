@@ -1,17 +1,17 @@
 # Owen Anderson portfolio
 
-Static portfolio at https://owanden.github.io/ using GitHub Pages from the main branch.
+Public static output for https://owanden.github.io/ on GitHub Pages.
 
-Preview from this directory:
+The design and content are maintained in the separate PortfolioWebsite source project. Its dependency-free generator builds the project index, detail pages, stylesheet, favicon and 404 page. Build and check there, then use its guarded `scripts/publish-pages.mjs` helper with this clean checkout as the target. Review and commit the generated diff here; avoid editing the same content in both repositories.
 
-```sh
-python -m http.server 8765 --bind 127.0.0.1
-```
+`generated-pages.json` records the source commit and SHA256 of the generated files. It excludes independently retained assets. The public output contains no generator source, private project code, imported conversations or planning documents.
 
-Open http://127.0.0.1:8765/. No build step or package installation is required. Project cards link to public source repositories and local demo instructions. The Incident Triage demo uses predetermined fixture responses, and the Office Hours Queue walkthrough uses simulated notifications. Dispatch also links to recorded measurements.
+Selected work: Dispatch, RustLB, Office Hours Queue and Incident Triage Agent. Each detail page explains an implementation decision, a failure boundary and the available verification. RustLB source remains private. Project descriptions distinguish local demonstrations and fixed fixtures from deployed services or model-quality results.
 
 ## Queue browser preview
 
-`demos/office-hours-queue/` contains the static browser preview built from OH-Queue. It reuses the queue interface with synthetic state held in one tab and no backend, credential entry, real phone input or provider calls. It resets on reload; simulated role controls do not establish API authentication or durable/shared state. The project card also retains the real full-stack local walkthrough.
+`demos/office-hours-queue/` retains the separate OH-Queue browser preview. It uses synthetic in-tab state, simulated roles and no backend/provider calls. `source.json` pins its source commit, build command and asset hashes. Update it from the source browser-preview target after checking the built output; do not copy environment files, source maps or private workspace material.
 
-`source.json` records the source repository/commit, build command and SHA256 of each copied asset. To update, build the recorded source's browser-preview target, review the resulting HTML/CSS/JavaScript, replace the preview directory, normalize built HTML to LF line endings and regenerate that provenance file. No environment files, source maps or private workspace materials belong in this static artifact.
+## Preview
+
+Serve this directory with a local static HTTP server, then inspect the home page, `/projects/rustlb/` and the existing queue preview. The generated portfolio pages require no browser JavaScript or package installation.
