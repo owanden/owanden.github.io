@@ -4,7 +4,7 @@
   "build_command": "pnpm --filter oh-kiosk-frontend build:browser-preview",
   "mode": "synthetic browser-only preview; no backend or provider",
   "sha256": {
-    "index.html": "cc5140726f23ebd2b64107d6a66b80015e6fdac371d47defc1df0fedcb6fb71b",
+    "index.html": "5f15d080c8372511a2c4d59cbaceaa9f1248520903880cd11936ba460ce61f7a",
     "assets/index-BEQIWIxz.css": "86734bdad78e7ae6e2221778c12fb9766d92d788dc14426a7089e3fbae48cac3",
     "assets/index-Dw8irKdo.js": "fe38e5f7b455e4a19a22049782aa06cbc96ee59c475edf5f3356c95ade346c54"
   },
