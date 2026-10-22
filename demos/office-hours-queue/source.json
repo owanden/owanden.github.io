@@ -1,12 +1,12 @@
 {
   "repository": "https://github.com/owanden/OH-Queue",
-  "commit": "6c0c9fcbacd9f38b394a0d750cd227e4b5821fb7",
+  "commit": "d393b6a14f5b5713eb317ff056694157de468eba",
   "build_command": "pnpm --filter oh-kiosk-frontend build:browser-preview",
   "mode": "synthetic browser-only preview; no backend or provider",
   "sha256": {
-    "assets/index-C9hsaS8t.css": "6618ac9abb8c81183d88a0d9ca2588ec71d4ab897b316cf85cc5de2b6b1bf2d6",
-    "assets/index-CyY_4704.js": "70fcd8e10081242ea309d46d2c35a94abdd2876170f04d32d179fe78e5013f6c",
-    "index.html": "70a113892d0c0b73deb7ab7c40b464159a0d2c7a5eb36336be10940a5dfcec4d"
+    "index.html": "cc5140726f23ebd2b64107d6a66b80015e6fdac371d47defc1df0fedcb6fb71b",
+    "assets/index-BEQIWIxz.css": "86734bdad78e7ae6e2221778c12fb9766d92d788dc14426a7089e3fbae48cac3",
+    "assets/index-Dw8irKdo.js": "fe38e5f7b455e4a19a22049782aa06cbc96ee59c475edf5f3356c95ade346c54"
   },
   "html_line_endings": "LF normalized after build"
 }
