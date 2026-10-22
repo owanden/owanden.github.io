@@ -147,3 +147,27 @@
   .project-meta { flex-wrap: wrap; gap: 10px 24px; }
   .delivery-retry { text-align: center; }
 }
+
+@layer layout {
+  .site-header { justify-content: space-between; }
+  .intro { padding: 52px 0 48px; }
+  .intro h1 { font-family: var(--sans); font-weight: 650; font-size: clamp(2.2rem, 4vw, 3.3rem); letter-spacing: -.04em; margin: 12px 0 18px; }
+  .intro-description { max-width: 660px; font-size: 18px; color: var(--muted); }
+  .project-row { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 56px; align-items: start; padding: 32px 0; }
+  .project-copy { padding-right: 0; }
+  .project-description { max-width: 560px; }
+  .project-facts { margin: 4px 0 0; padding-left: 24px; border-left: 2px solid var(--line); }
+  .project-facts div + div { margin-top: 18px; }
+  .project-facts dt { font-size: 13px; color: var(--muted); }
+  .project-facts dd { margin: 4px 0 0; font-size: 15px; }
+  .case-body > section:first-child h2 { margin-top: 0; }
+}
+@layer responsive {
+  @media (max-width: 700px) {
+    .intro { padding: 36px 0; }
+    .intro-description { font-size: 16px; }
+    .project-row { grid-template-columns: 1fr; gap: 24px; }
+    .project-facts { padding-left: 16px; }
+    .section-heading > span { display: none; }
+  }
+}
